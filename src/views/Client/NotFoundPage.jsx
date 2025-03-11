@@ -4,10 +4,20 @@ import { AlertTriangle } from "lucide-react";
 
 const NotFoundPage = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4">
-      <AlertTriangle className="w-20 h-20 text-red-500" />
-      <h1 className="mt-4 text-5xl font-bold text-gray-800">404</h1>
-      <p className="mt-2 text-xl text-gray-600">
+    <div className="relative flex flex-col items-center justify-center min-h-screen  p-4 Layout">
+      <img 
+      src="https://raw.githubusercontent.com/MelladoDev/BookStore/8b160f5f6d850256e15446c24d71ba03710e6b96/src/assets/blob%20(1).svg"
+       alt="blob" 
+       className="absolute z-10 h-4/6 w-4/6 top-20 drop-shadow-lg rotate-180"
+       transform="rotate(45deg)"
+      />
+      
+      <img src="https://raw.githubusercontent.com/MelladoDev/BookStore/8b160f5f6d850256e15446c24d71ba03710e6b96/src/assets/404%20Error%20with%20a%20cute%20animal-pana.svg" 
+      alt="cat" 
+      className="relative z-20 h-96 w-96 drop-shadow-lg " />
+
+      
+      <p className="relative z-20 mt-20 text-xl text-black font-bold text-center">
         Lo sentimos, la página que buscas no existe.
       </p>
       <Link

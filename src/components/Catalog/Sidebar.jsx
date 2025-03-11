@@ -14,7 +14,7 @@ function Sidebar({
   const valueFn = getItemValue || getItemLabel;
 
   return (
-    <div className="fixed w-40 left-0 top-1/4 flex flex-col items-center">
+    <div className="fixed w-40 left-0 top-1/6 flex flex-col items-center">
       {/* Fondo del libro */}
       <img
         src={SidebarBg}

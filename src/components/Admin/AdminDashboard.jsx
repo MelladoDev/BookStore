@@ -11,7 +11,7 @@ const AdminDashboard = () => {
     `hover:bg-sky-950 h-32 w-full place-content-center transition-colors text-center `;
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#f9f0df] ">
+    <div className="min-h-screen flex flex-col  ">
       {/* Header */}
       <header className="bg-gray-900 text-white p-6 shadow-xl border-b-2  border-gray-800 ">
         <a href="/admin"><h1 className="text-3xl font-bold">Panel de Administración</h1></a>
