@@ -34,9 +34,12 @@ function RegisterForm({ toggleForm }) {
   };
 
   // Validación de los campos antes del envío
-  let newErrors = {};
   const validateForm = () => {
+    let newErrors = {};
+    console.log("newErrors", newErrors);
+
     if (!form.nombre.trim()) newErrors.nombre = "El nombre es obligatorio.";
+
     if (!form.correo_electronico.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/))
       newErrors.correo_electronico = "Correo inválido.";
     if (form.contraseña.length < 8)
@@ -53,6 +56,7 @@ function RegisterForm({ toggleForm }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("datos", form);
+
     if (validateForm()) {
       register(form);
     }
@@ -85,10 +89,10 @@ function RegisterForm({ toggleForm }) {
               placeholder="John Doe"
               value={form.nombre}
               onChange={handleChange}
-              required
+              
             />
-            {newErrors.nombre && (
-              <p className="text-red-500 text-sm">{newErrors.name}</p>
+            {errors.nombre && (
+              <p className="text-red-500 text-sm">{errors.nombre}</p>
             )}
           </div>
 
@@ -108,10 +112,10 @@ function RegisterForm({ toggleForm }) {
               placeholder="name@company.com"
               value={form.correo_electronico}
               onChange={handleChange}
-              required
+              
             />
-            { newErrors.correo_electronico && (
-              <p className="text-red-500 text-sm">{newErrors.email}</p>
+            { errors.correo_electronico && (
+              <p className="text-red-500 text-sm">{errors.correo_electronico}</p>
             )}
           </div>
 
@@ -131,10 +135,10 @@ function RegisterForm({ toggleForm }) {
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
               value={form.contraseña}
               onChange={handleChange}
-              required
+              
             />
-            {newErrors.contraseña && (
-              <p className="text-red-500 text-sm">{newErrors.contraseña}</p>
+            {errors.contraseña && (
+              <p className="text-red-500 text-sm">{errors.contraseña}</p>
             )}
           </div>
 
@@ -154,10 +158,10 @@ function RegisterForm({ toggleForm }) {
               placeholder="+56 9 XXXX XXXX"
               value={form.telefono}
               onChange={handleChange}
-              required
+              
             />
-            {newErrors.telefono && (
-              <p className="text-red-500 text-sm">{newErrors.phone}</p>
+            {errors.telefono && (
+              <p className="text-red-500 text-sm">{errors.telefono}</p>
             )}
           </div>
 
@@ -177,10 +181,10 @@ function RegisterForm({ toggleForm }) {
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
               value={form.direccion}
               onChange={handleChange}
-              required
+              
             />
-            {newErrors.direccion && (
-              <p className="text-red-500 text-sm">{newErrors.address}</p>
+            {errors.direccion && (
+              <p className="text-red-500 text-sm">{errors.direccion}</p>
             )}
           </div>
 
